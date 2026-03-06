@@ -46,7 +46,7 @@ function AuthControls() {
         redirectTo:
           typeof window === 'undefined'
             ? '/'
-            : `${window.location.pathname}${window.location.search}`,
+            : `${window.location.origin}${window.location.pathname}${window.location.search}`,
       })
     } catch (err) {
       const message = err instanceof Error ? err.message : 'Unable to sign in.'

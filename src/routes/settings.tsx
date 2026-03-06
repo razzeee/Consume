@@ -129,7 +129,7 @@ function SettingsContent() {
                 redirectTo:
                   typeof window === 'undefined'
                     ? '/settings'
-                    : `${window.location.pathname}${window.location.search}`,
+                    : `${window.location.origin}${window.location.pathname}${window.location.search}`,
               })
             }
             className="wow-button rounded-lg px-4 py-2 text-sm font-semibold"
