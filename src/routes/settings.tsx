@@ -130,15 +130,6 @@ function SettingsContent() {
                   typeof window === 'undefined'
                     ? '/settings'
                     : `${window.location.pathname}${window.location.search}`,
-              }).catch((err: unknown) => {
-                // OAuth redirects navigate away, dropping the WebSocket — expected.
-                if (
-                  err instanceof Error &&
-                  err.message.includes('Connection lost')
-                ) {
-                  return
-                }
-                throw err
               })
             }
             className="wow-button rounded-lg px-4 py-2 text-sm font-semibold"
