@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-03-06T02:15:21.576Z",
+  "generatedAt": "2026-03-06T16:09:29.891Z",
   "sourcePath": "data/turtle/catalog.normalized.json",
   "fetchMode": "cache-only",
   "totals": {
@@ -140,13 +140,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "83500",
-      "consumableName": "Plans: Untempered Runeblade",
+      "consumableExternalId": "60964",
+      "consumableName": "Plans: Mantle of Centaur Authority",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "60964",
-      "consumableName": "Plans: Mantle of Centaur Authority",
+      "consumableExternalId": "83500",
+      "consumableName": "Plans: Untempered Runeblade",
       "reason": "no-created-by-recipe"
     },
     {
@@ -270,13 +270,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "80651",
-      "consumableName": "Crystal Veil Platinum",
+      "consumableExternalId": "13509",
+      "consumableName": "Clutch of Foresight",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "13509",
-      "consumableName": "Clutch of Foresight",
+      "consumableExternalId": "80651",
+      "consumableName": "Crystal Veil Platinum",
       "reason": "no-created-by-recipe"
     },
     {
@@ -725,13 +725,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "70241",
-      "consumableName": "Amberglaze Donut",
+      "consumableExternalId": "41671",
+      "consumableName": "Amberale",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "41671",
-      "consumableName": "Amberale",
+      "consumableExternalId": "70241",
+      "consumableName": "Amberglaze Donut",
       "reason": "no-created-by-recipe"
     },
     {
@@ -740,13 +740,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "80699",
-      "consumableName": "Appearance Change Token",
+      "consumableExternalId": "3438",
+      "consumableName": "Ankh of Resurrection",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "3438",
-      "consumableName": "Ankh of Resurrection",
+      "consumableExternalId": "80699",
+      "consumableName": "Appearance Change Token",
       "reason": "no-created-by-recipe"
     },
     {
@@ -760,13 +760,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "20064",
-      "consumableName": "Arathi Basin Iron Ration",
+      "consumableExternalId": "20063",
+      "consumableName": "Arathi Basin Field Ration",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "20063",
-      "consumableName": "Arathi Basin Field Ration",
+      "consumableExternalId": "20064",
+      "consumableName": "Arathi Basin Iron Ration",
       "reason": "no-created-by-recipe"
     },
     {
@@ -1055,13 +1055,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "80200",
-      "consumableName": "Bundle of Wood",
+      "consumableExternalId": "15314",
+      "consumableName": "Bundle of Relics",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "15314",
-      "consumableName": "Bundle of Relics",
+      "consumableExternalId": "80200",
+      "consumableName": "Bundle of Wood",
       "reason": "no-created-by-recipe"
     },
     {
@@ -1340,13 +1340,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "4599",
-      "consumableName": "Cured Ham Steak",
+      "consumableExternalId": "414",
+      "consumableName": "Dalaran Sharp",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "414",
-      "consumableName": "Dalaran Sharp",
+      "consumableExternalId": "4599",
+      "consumableName": "Cured Ham Steak",
       "reason": "no-created-by-recipe"
     },
     {
@@ -1440,13 +1440,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "8953",
-      "consumableName": "Deep Fried Plantains",
+      "consumableExternalId": "55509",
+      "consumableName": "Deepsea Lobster",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "55509",
-      "consumableName": "Deepsea Lobster",
+      "consumableExternalId": "8953",
+      "consumableName": "Deep Fried Plantains",
       "reason": "no-created-by-recipe"
     },
     {
@@ -1575,11 +1575,6 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "422",
-      "consumableName": "Dwarven Mild",
-      "reason": "no-created-by-recipe"
-    },
-    {
       "consumableExternalId": "7970",
       "consumableName": "E.C.A.C.",
       "reason": "no-created-by-recipe"
@@ -1590,18 +1585,23 @@
       "reason": "no-created-by-recipe"
     },
     {
+      "consumableExternalId": "422",
+      "consumableName": "Dwarven Mild",
+      "reason": "no-created-by-recipe"
+    },
+    {
       "consumableExternalId": "8432",
       "consumableName": "Eau de Mixilpixil",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "21745",
-      "consumableName": "Elder's Moonstone",
+      "consumableExternalId": "13149",
+      "consumableName": "Eldarathian Tome of Summoning Vol. 1",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "13149",
-      "consumableName": "Eldarathian Tome of Summoning Vol. 1",
+      "consumableExternalId": "21745",
+      "consumableName": "Elder's Moonstone",
       "reason": "no-created-by-recipe"
     },
     {
@@ -2175,13 +2175,13 @@
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "20066",
-      "consumableName": "Arathi Basin Runecloth Bandage",
+      "consumableExternalId": "20065",
+      "consumableName": "Arathi Basin Mageweave Bandage",
       "reason": "no-created-by-recipe"
     },
     {
-      "consumableExternalId": "20065",
-      "consumableName": "Arathi Basin Mageweave Bandage",
+      "consumableExternalId": "20066",
+      "consumableName": "Arathi Basin Runecloth Bandage",
       "reason": "no-created-by-recipe"
     },
     {

@@ -16,6 +16,8 @@ const MANUAL_RECIPE_OVERRIDES_PATH = resolve(
 )
 const PERSIST_CONVEX_FLAG = '--persist-convex'
 const persistConvex = process.argv.includes(PERSIST_CONVEX_FLAG)
+const PROD_FLAG = '--prod'
+const targetProd = process.argv.includes(PROD_FLAG)
 const CONVEX_IMPORT_BATCH_SIZE = 150
 
 const LOCAL_SEED_CONSUMABLES = [
@@ -493,15 +495,15 @@ function chunkArray(records, chunkSize) {
 
 function runConvexMutation(functionName, args) {
   return new Promise((resolveRun, rejectRun) => {
-    const child = spawn(
-      'npx',
-      ['convex', 'run', functionName, JSON.stringify(args)],
-      {
-        stdio: 'inherit',
-        cwd: process.cwd(),
-        env: process.env,
-      },
-    )
+    const convexArgs = ['convex', 'run', functionName, JSON.stringify(args)]
+    if (targetProd) {
+      convexArgs.push('--prod')
+    }
+    const child = spawn('npx', convexArgs, {
+      stdio: 'inherit',
+      cwd: process.cwd(),
+      env: process.env,
+    })
 
     child.on('error', (error) => {
       rejectRun(error)
