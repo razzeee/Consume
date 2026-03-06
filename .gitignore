@@ -1,0 +1,32 @@
+# dependencies
+node_modules
+
+# build output
+dist
+dist-ssr
+
+# environment & local config
+*.local
+.env
+
+# framework artifacts
+.convex
+.nitro
+.tanstack
+.wrangler
+.output
+.vinxi
+__unconfig*
+
+# scraped data (reproducible via scripts/turtle/)
+data/turtle/raw
+
+# tooling artifacts
+.cta.json
+.DS_Store
+
+# test output
+coverage
+
+# local files
+todos.json

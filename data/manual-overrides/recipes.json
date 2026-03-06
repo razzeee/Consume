@@ -1,0 +1,24 @@
+{
+    "updatedAt": "2026-03-06T00:00:00.000Z",
+    "rules": [
+        {
+            "id": "example-flask-supreme-power",
+            "consumableName": "Flask of Supreme Power",
+            "ingredients": [
+                {
+                    "name": "Dreamfoil",
+                    "qtyPerConsumable": 10
+                },
+                {
+                    "name": "Plaguebloom",
+                    "qtyPerConsumable": 3
+                },
+                {
+                    "name": "Crystal Vial",
+                    "qtyPerConsumable": 1
+                }
+            ],
+            "reason": "Example override scaffold"
+        }
+    ]
+}

@@ -1,0 +1,73 @@
+{
+  "name": "consume",
+  "private": true,
+  "type": "module",
+  "imports": {
+    "#/*": "./src/*"
+  },
+  "scripts": {
+    "dev": "vite dev --port 3000",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "ingest:turtle:raw": "node scripts/turtle/fetch-catalog.mjs",
+    "ingest:turtle:normalize": "node scripts/turtle/normalize-catalog.mjs",
+    "ingest:turtle:recipes": "node scripts/turtle/extract-recipes.mjs",
+    "ingest:turtle:recipes:no-fetch": "node scripts/turtle/extract-recipes.mjs --no-fetch",
+    "ingest:turtle:import": "node scripts/turtle/import-to-convex.mjs",
+    "ingest:turtle:import:persist": "node scripts/turtle/import-to-convex.mjs --persist-convex",
+    "ingest:turtle": "node scripts/turtle/run-pipeline.mjs",
+    "ingest:turtle:persist": "node scripts/turtle/run-pipeline.mjs --persist-convex",
+    "ingest:turtle:no-fetch": "node scripts/turtle/run-pipeline.mjs --no-fetch",
+    "ingest:turtle:no-fetch:persist": "node scripts/turtle/run-pipeline.mjs --no-fetch --persist-convex",
+    "ingest:turtle:full": "pnpm icons:wow:all && node scripts/turtle/run-pipeline.mjs",
+    "ingest:turtle:full:persist": "pnpm icons:wow:all && node scripts/turtle/run-pipeline.mjs --persist-convex",
+    "icons:wow:sync": "node scripts/wow-icons/sync-icons.mjs",
+    "icons:wow:index": "node scripts/wow-icons/build-icon-index.mjs",
+    "icons:wow:verify": "node scripts/wow-icons/verify-icons.mjs",
+    "icons:wow:all": "pnpm icons:wow:sync && pnpm icons:wow:index && pnpm icons:wow:verify",
+    "format": "prettier --check .",
+    "check": "prettier --write . && eslint --fix"
+  },
+  "dependencies": {
+    "@auth/core": "^0.37.2",
+    "@convex-dev/auth": "^0.0.91",
+    "@tailwindcss/vite": "^4.1.18",
+    "@tanstack/react-devtools": "latest",
+    "@tanstack/react-router": "latest",
+    "@tanstack/react-router-devtools": "latest",
+    "@tanstack/router-plugin": "^1.132.0",
+    "convex": "^1.32.0",
+    "lucide-react": "^0.545.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.5.16",
+    "@tanstack/devtools-vite": "latest",
+    "@tanstack/eslint-config": "latest",
+    "@tanstack/router-plugin": "latest",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.0",
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "@vitejs/plugin-react": "^5.1.4",
+    "eslint": "^9.39.1",
+    "jsdom": "^28.1.0",
+    "prettier": "^3.8.1",
+    "typescript": "^5.7.2",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^5.1.4",
+    "vitest": "^3.0.5"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "lightningcss"
+    ]
+  }
+}

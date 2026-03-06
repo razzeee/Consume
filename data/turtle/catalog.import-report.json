@@ -1,0 +1,540 @@
+{
+  "generatedAt": "2026-03-06T02:15:21.609Z",
+  "generatedAtMs": 1772763321609,
+  "totals": {
+    "sourceEntries": 1329,
+    "consumableCandidates": 700,
+    "ingredientCandidates": 1328,
+    "uniqueConsumables": 675,
+    "uniqueIngredients": 1254,
+    "seededConsumablesAdded": 1,
+    "seededIngredientsAdded": 1,
+    "extractedRecipeCandidates": 241,
+    "manualRecipeRules": 1,
+    "recipesResolved": 200,
+    "recipeIngredientsResolved": 536,
+    "recipesUnresolved": 41
+  },
+  "unresolvedRecipes": [
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "56016",
+      "consumableName": "Arcane Emerald Gemstone",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "12363",
+          "ingredientName": "Arcane Crystal"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "56013",
+      "consumableName": "Flawless Black Gemstone",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "18335",
+          "ingredientName": "Unknown item 18335"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "56076",
+      "consumableName": "Resilient Arcane Gemstone",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "12363",
+          "ingredientName": "Arcane Crystal"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "56012",
+      "consumableName": "Gloomy Diamond Gemstone",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "11754",
+          "ingredientName": "Unknown item 11754"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "65017",
+      "consumableName": "Scroll of Empowered Protection",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2453",
+          "ingredientName": "Bruiseweed"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "56011",
+      "consumableName": "Unstable Arcane Gemstone",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "12363",
+          "ingredientName": "Arcane Crystal"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "2888",
+      "consumableName": "Beer Basted Boar Ribs",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2894",
+          "ingredientName": "Unknown item 2894"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "5525",
+      "consumableName": "Boiled Clams",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "159",
+          "ingredientName": "Unknown item 159"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "22298",
+      "consumableName": "Book of Romantic Poems",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "22174",
+          "ingredientName": "Unknown item 22174"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "22291",
+      "consumableName": "Box of Woodcrafts",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "21960",
+          "ingredientName": "Unknown item 21960"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "6290",
+      "consumableName": "Brilliant Smallfish",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "6291",
+          "ingredientName": "Unknown item 6291"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "4593",
+      "consumableName": "Bristle Whisker Catfish",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "6308",
+          "ingredientName": "Unknown item 6308"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "22284",
+      "consumableName": "Bundle of Cards",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "22143",
+          "ingredientName": "Unknown item 22143"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "5526",
+      "consumableName": "Clam Chowder",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "1179",
+          "ingredientName": "Unknown item 1179"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "13927",
+      "consumableName": "Cooked Glossy Mightfish",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "13754",
+          "ingredientName": "Unknown item 13754"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "41673",
+      "consumableName": "Crawford Apple Tarte",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "4539",
+          "ingredientName": "Unknown item 4539"
+        },
+        {
+          "ingredientExternalId": "41677",
+          "ingredientName": "Unknown item 41677"
+        },
+        {
+          "ingredientExternalId": "1179",
+          "ingredientName": "Unknown item 1179"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "23683",
+      "consumableName": "Crystal Flake Throat Lozenge",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "23567",
+          "ingredientName": "Unknown item 23567"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "23684",
+      "consumableName": "Crystal Infused Bandage",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "23567",
+          "ingredientName": "Unknown item 23567"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "22290",
+      "consumableName": "Darnassus Pledge Collection",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "22120",
+          "ingredientName": "Unknown item 22120"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "missing-consumable",
+      "consumableExternalId": "40001"
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "5478",
+      "consumableName": "Dig Rat Stew",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "5051",
+          "ingredientName": "Unknown item 5051"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "17198",
+      "consumableName": "Egg Nog",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "1179",
+          "ingredientName": "Unknown item 1179"
+        },
+        {
+          "ingredientExternalId": "17196",
+          "ingredientName": "Unknown item 17196"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "2460",
+      "consumableName": "Elixir of Tongues (NYI)",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "83309",
+      "consumableName": "Empowering Herbal Salad",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "22529",
+          "ingredientName": "Unknown item 22529"
+        },
+        {
+          "ingredientExternalId": "51714",
+          "ingredientName": "Unknown item 51714"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "no-resolved-ingredients",
+      "consumableExternalId": "13930",
+      "consumableName": "Filet of Redgill",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "13758",
+          "ingredientName": "Unknown item 13758"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "47414",
+      "consumableName": "Concoction of the Dreamwater",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "12820",
+          "ingredientName": "Unknown item 12820"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "6662",
+      "consumableName": "Elixir of Giant Growth",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "2454",
+      "consumableName": "Elixir of Lion's Strength",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "2458",
+      "consumableName": "Elixir of Minor Fortitude",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "3391",
+      "consumableName": "Elixir of Ogre's Strength",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "3386",
+      "consumableName": "Elixir of Poison Resistance",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2453",
+          "ingredientName": "Bruiseweed"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "13459",
+      "consumableName": "Greater Shadow Protection Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "3824",
+          "ingredientName": "Unknown item 3824"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "929",
+      "consumableName": "Healing Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2453",
+          "ingredientName": "Bruiseweed"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "6051",
+      "consumableName": "Holy Protection Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2453",
+          "ingredientName": "Bruiseweed"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "3826",
+      "consumableName": "Mighty Troll's Blood Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2453",
+          "ingredientName": "Bruiseweed"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "6048",
+      "consumableName": "Shadow Protection Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "3369",
+          "ingredientName": "Grave Moss"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "3388",
+      "consumableName": "Strong Troll's Blood Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2453",
+          "ingredientName": "Bruiseweed"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "7676",
+      "consumableName": "Thistle Tea",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "159",
+          "ingredientName": "Unknown item 159"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "3382",
+      "consumableName": "Weak Troll's Blood Potion",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "3013",
+      "consumableName": "Scroll of Protection",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    },
+    {
+      "source": "turtle-created-by",
+      "reason": "partial-ingredient-resolution",
+      "consumableExternalId": "954",
+      "consumableName": "Scroll of Strength",
+      "missingIngredients": [
+        {
+          "ingredientExternalId": "2449",
+          "ingredientName": "Earthroot"
+        }
+      ]
+    }
+  ],
+  "notes": [
+    "Convex persistence requested: payload will be upserted into Convex tables.",
+    "Extracted recipe catalog loaded from /home/razze/dev/consume/data/turtle/catalog.recipes.extracted.json.",
+    "Manual recipe overrides loaded from /home/razze/dev/consume/data/manual-overrides/recipes.json."
+  ],
+  "persistence": {
+    "requested": true,
+    "completed": true,
+    "summary": {
+      "consumables": 675,
+      "ingredients": 1254,
+      "recipes": 200,
+      "recipeIngredients": 536,
+      "consumableBatches": 5,
+      "ingredientBatches": 9,
+      "recipeBatches": 2,
+      "recipeIngredientBatches": 2
+    }
+  }
+}

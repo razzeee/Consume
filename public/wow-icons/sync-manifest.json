@@ -1,0 +1,15 @@
+{
+  "syncedAt": "2026-03-06T01:22:40.020Z",
+  "source": {
+    "projectId": "74207331",
+    "treePath": "public/wow-icons"
+  },
+  "totals": {
+    "remoteFiles": 3823,
+    "downloadedFiles": 2879,
+    "skippedExistingFiles": 944,
+    "removedStaleFiles": 0,
+    "totalDownloadedBytes": 25694181
+  },
+  "staleFiles": []
+}

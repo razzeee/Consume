@@ -1,0 +1,1245 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@500;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Alegreya+Sans+SC:wght@400;500;700&display=swap");
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --font-sans: "EB Garamond", "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+/* =====================================================================
+   THE ARCANE LEDGER — Design System
+   A war-table interface for Turtle WoW guild logistics.
+   Aesthetic: aged parchment, burnished gold filigree, forged iron frames.
+   ===================================================================== */
+
+:root {
+  --wow-ink: #ede0c8;
+  --wow-ink-soft: #a89474;
+  --wow-accent: #d4a24e;
+  --wow-accent-bright: #f0c661;
+  --wow-ember: #c96b2e;
+  --wow-emerald: #4b9a65;
+  --wow-surface: rgba(22, 18, 12, 0.92);
+  --wow-surface-deep: rgba(30, 24, 16, 0.9);
+  --wow-line: rgba(180, 140, 78, 0.22);
+  --wow-bg-base: #0c0a07;
+  --wow-header: rgba(14, 11, 8, 0.88);
+  --wow-chip-bg: rgba(34, 26, 16, 0.82);
+  --wow-chip-line: rgba(196, 152, 72, 0.3);
+  --wow-link-hover: rgba(212, 162, 78, 0.15);
+  --wow-inset: rgba(255, 220, 150, 0.1);
+  --wow-button-ready: linear-gradient(180deg, rgba(75, 154, 101, 0.36), rgba(42, 100, 62, 0.2));
+  --wow-button-ready-ink: #c8ebd4;
+  --wow-shadow-soft: 0 8px 24px rgba(0, 0, 0, 0.32);
+  --wow-shadow-strong: 0 20px 48px rgba(0, 0, 0, 0.52);
+  --wow-alliance: #6b9ad0;
+  --wow-horde: #c86e3c;
+
+  --wow-gold-glow: rgba(212, 162, 78, 0.35);
+  --wow-filigree: rgba(196, 152, 72, 0.14);
+  --wow-parchment-grain: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+
+  --header-shadow: 0 4px 32px rgba(0, 0, 0, 0.55);
+  --panel-shadow: 0 12px 40px rgba(0, 0, 0, 0.38);
+  --panel-shadow-hover: 0 16px 52px rgba(0, 0, 0, 0.5);
+  --panel-border: 1px solid color-mix(in oklab, var(--wow-line) 80%, var(--wow-accent) 20%);
+
+  --sea-ink: var(--wow-ink);
+  --sea-ink-soft: var(--wow-ink-soft);
+  --lagoon-deep: var(--wow-accent);
+  --line: var(--wow-line);
+  --header-bg: var(--wow-header);
+  --chip-bg: var(--wow-chip-bg);
+  --chip-line: var(--wow-chip-line);
+  --link-bg-hover: var(--wow-link-hover);
+}
+
+:root[data-theme="light"] {
+  --wow-ink: #1e150a;
+  --wow-ink-soft: #5e442a;
+  --wow-accent: #8a4c1e;
+  --wow-accent-bright: #b06e30;
+  --wow-ember: #993c16;
+  --wow-emerald: #3a6b48;
+  --wow-surface: rgba(240, 222, 190, 0.94);
+  --wow-surface-deep: rgba(226, 204, 168, 0.9);
+  --wow-line: rgba(100, 68, 30, 0.24);
+  --wow-bg-base: #d8c09a;
+  --wow-header: rgba(228, 210, 178, 0.9);
+  --wow-chip-bg: rgba(222, 200, 162, 0.92);
+  --wow-chip-line: rgba(120, 82, 36, 0.32);
+  --wow-link-hover: rgba(172, 112, 50, 0.18);
+  --wow-inset: rgba(255, 248, 230, 0.6);
+  --wow-button-ready: linear-gradient(180deg, rgba(80, 148, 92, 0.32), rgba(50, 108, 68, 0.2));
+  --wow-button-ready-ink: #1a3d24;
+  --wow-shadow-soft: 0 6px 20px rgba(60, 36, 10, 0.16);
+  --wow-shadow-strong: 0 14px 38px rgba(60, 36, 10, 0.28);
+  --wow-alliance: #4a6d9a;
+  --wow-horde: #964a28;
+  --wow-gold-glow: rgba(138, 76, 30, 0.2);
+  --wow-filigree: rgba(100, 68, 30, 0.1);
+
+  --header-shadow: 0 4px 28px rgba(50, 30, 8, 0.18);
+  --panel-shadow: 0 10px 32px rgba(50, 28, 8, 0.16);
+  --panel-shadow-hover: 0 14px 44px rgba(50, 28, 8, 0.24);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    --wow-ink: #1e150a;
+    --wow-ink-soft: #5e442a;
+    --wow-accent: #8a4c1e;
+    --wow-accent-bright: #b06e30;
+    --wow-ember: #993c16;
+    --wow-emerald: #3a6b48;
+    --wow-surface: rgba(240, 222, 190, 0.94);
+    --wow-surface-deep: rgba(226, 204, 168, 0.9);
+    --wow-line: rgba(100, 68, 30, 0.24);
+    --wow-bg-base: #d8c09a;
+    --wow-header: rgba(228, 210, 178, 0.9);
+    --wow-chip-bg: rgba(222, 200, 162, 0.92);
+    --wow-chip-line: rgba(120, 82, 36, 0.32);
+    --wow-link-hover: rgba(172, 112, 50, 0.18);
+    --wow-inset: rgba(255, 248, 230, 0.6);
+    --wow-button-ready: linear-gradient(180deg, rgba(80, 148, 92, 0.32), rgba(50, 108, 68, 0.2));
+    --wow-button-ready-ink: #1a3d24;
+    --wow-shadow-soft: 0 6px 20px rgba(60, 36, 10, 0.16);
+    --wow-shadow-strong: 0 14px 38px rgba(60, 36, 10, 0.28);
+    --wow-alliance: #4a6d9a;
+    --wow-horde: #964a28;
+    --wow-gold-glow: rgba(138, 76, 30, 0.2);
+    --wow-filigree: rgba(100, 68, 30, 0.1);
+
+    --header-shadow: 0 4px 28px rgba(50, 30, 8, 0.18);
+    --panel-shadow: 0 10px 32px rgba(50, 28, 8, 0.16);
+    --panel-shadow-hover: 0 14px 44px rgba(50, 28, 8, 0.24);
+  }
+}
+
+/* ----- Reset & Base ----- */
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  color: var(--wow-ink);
+  font-family: var(--font-sans);
+  font-size: 1.05rem;
+  font-feature-settings: "liga" 1, "kern" 1, "onum" 1;
+  line-height: 1.6;
+  background-color: var(--wow-bg-base);
+  background-image:
+    radial-gradient(ellipse 1400px 700px at 15% -8%, rgba(196, 120, 40, 0.16), transparent 60%),
+    radial-gradient(ellipse 1200px 600px at 85% -12%, rgba(72, 108, 148, 0.12), transparent 55%),
+    radial-gradient(ellipse 800px 800px at 50% 100%, rgba(196, 120, 40, 0.06), transparent 50%);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.skip-link {
+  position: fixed;
+  left: 0.75rem;
+  top: 0.6rem;
+  z-index: 80;
+  border: 1px solid var(--wow-accent);
+  border-radius: 4px;
+  background: var(--wow-surface);
+  color: var(--wow-ink);
+  padding: 0.45rem 0.8rem;
+  font-size: 0.76rem;
+  font-weight: 700;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: translateY(-150%);
+  transition: transform 160ms ease;
+}
+
+.skip-link:focus-visible {
+  transform: translateY(0);
+}
+
+/* Parchment grain texture overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  opacity: 0.55;
+  background-image: var(--wow-parchment-grain);
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* Warm torch-glow atmosphere */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  background:
+    radial-gradient(ellipse 600px 400px at 50% -4%, var(--wow-gold-glow), transparent 70%),
+    radial-gradient(ellipse 500px 500px at 85% 100%, rgba(72, 108, 148, 0.1), transparent 50%);
+}
+
+/* ----- Typography anchors ----- */
+
+a {
+  color: var(--wow-accent);
+  text-decoration-color: color-mix(in oklab, var(--wow-accent) 40%, transparent 60%);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  transition: color 140ms ease;
+}
+
+a:hover {
+  color: var(--wow-accent-bright);
+}
+
+code {
+  font-size: 0.88em;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  border-radius: 4px;
+  padding: 2px 7px;
+}
+
+/* ----- App Shell ----- */
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  isolation: isolate;
+}
+
+.app-frame {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+/* ----- Atmosphere decorations ----- */
+
+.warcraft-atmosphere {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.atmosphere-ring {
+  position: absolute;
+  width: min(38vw, 520px);
+  aspect-ratio: 1;
+  border-radius: 999px;
+  border: 1px solid color-mix(in oklab, var(--wow-accent) 30%, transparent 70%);
+  opacity: 0.18;
+  filter: blur(0.5px);
+}
+
+.atmosphere-ring::before {
+  content: "";
+  position: absolute;
+  inset: 24px;
+  border-radius: inherit;
+  border: 1px dashed color-mix(in oklab, var(--wow-accent-bright) 24%, transparent 76%);
+  animation: rune-rotation 40s linear infinite;
+}
+
+.atmosphere-ring-left {
+  left: -16vw;
+  top: 20vh;
+}
+
+.atmosphere-ring-right {
+  right: -16vw;
+  bottom: 8vh;
+}
+
+.atmosphere-spark {
+  position: absolute;
+  left: 42%;
+  top: 6%;
+  width: min(18vw, 300px);
+  height: min(18vw, 300px);
+  background: radial-gradient(circle, var(--wow-gold-glow), transparent 68%);
+  filter: blur(12px);
+  animation: pulse-glow 10s ease-in-out infinite;
+}
+
+/* ----- Layout ----- */
+
+.page-wrap {
+  width: min(1140px, calc(100% - 2rem));
+  margin-inline: auto;
+}
+
+/* =====================================================================
+   HEADER — Forged iron bar with gold filigree
+   ===================================================================== */
+
+.war-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid var(--wow-line);
+  backdrop-filter: blur(18px) saturate(1.1);
+  background:
+    linear-gradient(180deg, var(--wow-header), color-mix(in oklab, var(--wow-header) 80%, transparent 20%));
+  box-shadow: var(--header-shadow);
+}
+
+.war-header::after {
+  content: "";
+  position: absolute;
+  left: 5%;
+  right: 5%;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--wow-accent), transparent);
+  opacity: 0.4;
+}
+
+.war-header-aurora {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 500px 80px at 50% 100%, var(--wow-gold-glow), transparent 80%);
+  opacity: 0.5;
+}
+
+.war-nav {
+  position: relative;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.war-nav-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.war-auth-slot {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+.war-auth-slot .section-shell {
+  border-radius: 6px;
+  box-shadow: none;
+  padding: 0.35rem 0.5rem;
+}
+
+/* Brand lockup */
+.brand-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.4rem 0.7rem;
+  max-width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  box-shadow:
+    inset 0 1px 0 var(--wow-inset),
+    0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand-subtitle {
+  opacity: 0.8;
+}
+
+/* Navigation pill bar */
+.war-nav-links {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  align-items: center;
+  border: 1px solid var(--wow-line);
+  border-radius: 6px;
+  padding: 3px;
+  background: var(--wow-surface-deep);
+}
+
+.nav-link {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  text-decoration: none;
+  color: var(--wow-ink-soft);
+  font-weight: 500;
+  font-family: "Alegreya Sans SC", "Cinzel", serif;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 4px;
+  padding: 0.38rem 0.7rem;
+  transition: color 140ms ease, background 140ms ease;
+}
+
+.nav-link::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--wow-accent);
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 140ms ease, transform 140ms ease;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  right: 8px;
+  bottom: 0;
+  height: 2px;
+  transform: scaleX(0);
+  transform-origin: center;
+  background: linear-gradient(90deg, var(--wow-accent), var(--wow-accent-bright));
+  border-radius: 1px;
+  transition: transform 200ms ease;
+}
+
+.nav-link:hover,
+.nav-link.is-active {
+  color: var(--wow-ink);
+  background: var(--wow-link-hover);
+}
+
+.nav-link:hover::before,
+.nav-link.is-active::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.nav-link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* =====================================================================
+   FOOTER — Aged parchment footer panel
+   ===================================================================== */
+
+.war-footer {
+  border-top: 1px solid var(--wow-line);
+  background:
+    linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.06) 100%);
+  position: relative;
+}
+
+.war-footer::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--wow-accent), transparent);
+  opacity: 0.3;
+}
+
+.footer-panel {
+  overflow: hidden;
+  position: relative;
+}
+
+.footer-panel::after {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  bottom: 6px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, color-mix(in oklab, var(--wow-accent) 40%, transparent 60%), transparent);
+}
+
+.footer-crests {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+}
+
+/* =====================================================================
+   DISPLAY TYPOGRAPHY
+   ===================================================================== */
+
+.display-title {
+  font-family: "Cinzel Decorative", "Cinzel", "Palatino Linotype", serif;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+.island-kicker {
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.68rem;
+  color: var(--wow-accent);
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+/* =====================================================================
+   PANELS & CARDS — Corner bracket ornamented containers
+   ===================================================================== */
+
+.wow-panel,
+.island-shell {
+  position: relative;
+  border: var(--panel-border);
+  background:
+    linear-gradient(160deg, var(--wow-surface), var(--wow-surface-deep) 70%);
+  box-shadow:
+    inset 0 1px 0 var(--wow-inset),
+    var(--panel-shadow);
+  backdrop-filter: blur(4px);
+}
+
+/* Gold corner brackets on panels */
+.wow-panel::before,
+.wow-panel::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.wow-panel::before {
+  top: -1px;
+  left: -1px;
+  border-top: 2px solid var(--wow-accent);
+  border-left: 2px solid var(--wow-accent);
+}
+
+.wow-panel::after {
+  bottom: -1px;
+  right: -1px;
+  border-bottom: 2px solid var(--wow-accent);
+  border-right: 2px solid var(--wow-accent);
+}
+
+/* Campaign ribbon tags */
+.campaign-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 3px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  color: var(--wow-ink-soft);
+  padding: 0.18rem 0.55rem;
+  font-size: 0.62rem;
+  font-weight: 500;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.campaign-ribbon::before {
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-radius: 999px;
+  background: var(--wow-accent);
+  box-shadow: 0 0 4px var(--wow-gold-glow);
+}
+
+.campaign-ribbon--alliance::before {
+  background: var(--wow-alliance);
+  box-shadow: 0 0 4px rgba(107, 154, 208, 0.4);
+}
+
+.campaign-ribbon--horde::before {
+  background: var(--wow-horde);
+  box-shadow: 0 0 4px rgba(200, 110, 60, 0.4);
+}
+
+/* =====================================================================
+   HERO LAYOUT
+   ===================================================================== */
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.4fr) minmax(0, 0.85fr);
+  gap: 1rem;
+}
+
+.atlas-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.atlas-card::after {
+  content: "";
+  position: absolute;
+  inset: -30% -40% auto auto;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, var(--wow-gold-glow), transparent 68%);
+  transform: rotate(12deg);
+  pointer-events: none;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  padding: 0.28rem 0.65rem;
+  font-size: 0.76rem;
+  font-weight: 500;
+  color: var(--wow-ink-soft);
+  font-family: "Alegreya Sans SC", sans-serif;
+}
+
+.hero-flow {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.hero-flow-step {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  border-radius: 6px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  padding: 0.42rem 0.6rem;
+  font-size: 0.82rem;
+  color: var(--wow-ink-soft);
+  transition: border-color 140ms ease;
+}
+
+.hero-flow-step:hover {
+  border-color: color-mix(in oklab, var(--wow-accent) 50%, var(--wow-line));
+}
+
+.hero-flow-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 4px;
+  border: 1px solid var(--wow-accent);
+  background: color-mix(in oklab, var(--wow-accent) 12%, transparent 88%);
+  color: var(--wow-accent-bright);
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-family: "Cinzel", serif;
+}
+
+/* =====================================================================
+   OPERATION & FLOW GRIDS
+   ===================================================================== */
+
+.operation-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.operation-card {
+  border-radius: 8px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  padding: 0.85rem;
+  box-shadow: inset 0 1px 0 var(--wow-inset);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.operation-card:hover {
+  border-color: color-mix(in oklab, var(--wow-accent) 40%, var(--wow-line));
+  transform: translateY(-1px);
+}
+
+.operation-number {
+  margin: 0;
+  color: var(--wow-accent);
+  font-size: 0.66rem;
+  font-weight: 700;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.flow-lane {
+  overflow: hidden;
+}
+
+.flow-lane::after {
+  content: "";
+  position: absolute;
+  left: 2rem;
+  right: 2rem;
+  top: 3.2rem;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--wow-accent), transparent);
+  opacity: 0.35;
+}
+
+/* Command checklists */
+.command-track {
+  display: grid;
+  gap: 0.4rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.command-step {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  padding: 0.5rem 0.65rem;
+  font-size: 0.84rem;
+  color: var(--wow-ink-soft);
+}
+
+.command-step-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  border-radius: 4px;
+  border: 1px solid var(--wow-accent);
+  background: color-mix(in oklab, var(--wow-accent) 10%, transparent 90%);
+  font-size: 0.68rem;
+  font-weight: 700;
+  font-family: "Cinzel", serif;
+  color: var(--wow-accent-bright);
+  flex: none;
+}
+
+/* =====================================================================
+   GUILD FLOW RAIL — 4-step navigation within guild context
+   ===================================================================== */
+
+.guild-flow-rail {
+  border: 1px solid var(--wow-line);
+  border-radius: 8px;
+  padding: 0.7rem;
+  background:
+    linear-gradient(145deg, var(--wow-surface-deep), color-mix(in oklab, var(--wow-surface-deep) 80%, transparent 20%));
+}
+
+.flow-track {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.45rem;
+}
+
+.flow-node {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+  border-radius: 6px;
+  border: 1px solid var(--wow-line);
+  padding: 0.45rem 0.5rem;
+  background: color-mix(in oklab, var(--wow-surface) 65%, transparent 35%);
+  color: var(--wow-ink-soft);
+  min-width: 0;
+  transition: border-color 140ms ease, color 140ms ease, transform 140ms ease, box-shadow 140ms ease;
+}
+
+.flow-node:hover,
+.flow-node.is-active {
+  border-color: var(--wow-accent);
+  color: var(--wow-ink);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2), 0 0 0 1px color-mix(in oklab, var(--wow-accent) 20%, transparent 80%);
+}
+
+.flow-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--wow-accent);
+  background: color-mix(in oklab, var(--wow-accent) 10%, transparent 90%);
+  font-family: "Cinzel", serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  color: var(--wow-accent-bright);
+  flex: none;
+}
+
+.flow-copy {
+  display: inline-flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.flow-copy strong {
+  font-size: 0.74rem;
+  line-height: 1.15;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.flow-copy span {
+  font-size: 0.66rem;
+  line-height: 1.2;
+  color: var(--wow-ink-soft);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* =====================================================================
+   SECTION SHELLS & CALLOUTS
+   ===================================================================== */
+
+.section-shell {
+  border-radius: 8px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  box-shadow: var(--wow-shadow-soft);
+}
+
+.quest-callout {
+  border: 1px solid color-mix(in oklab, var(--wow-accent) 50%, var(--wow-line));
+  border-left: 3px solid var(--wow-accent);
+  border-radius: 4px;
+  padding: 0.7rem 0.85rem;
+  background:
+    linear-gradient(135deg, color-mix(in oklab, var(--wow-surface-deep) 88%, transparent 12%), var(--wow-surface));
+}
+
+.quest-callout p {
+  margin: 0;
+}
+
+/* =====================================================================
+   STATUS & PROGRESS
+   ===================================================================== */
+
+.status-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  border-radius: 3px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+  color: var(--wow-ink-soft);
+  padding: 0.18rem 0.55rem;
+  font-size: 0.66rem;
+  font-weight: 500;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.status-chip.is-complete {
+  border-color: color-mix(in oklab, var(--wow-emerald) 60%, var(--wow-line));
+  color: var(--wow-emerald);
+  background: color-mix(in oklab, var(--wow-emerald) 8%, var(--wow-surface-deep) 92%);
+}
+
+.progress-meter {
+  height: 6px;
+  overflow: hidden;
+  border-radius: 3px;
+  border: 1px solid var(--wow-line);
+  background: var(--wow-surface-deep);
+}
+
+.progress-meter-fill {
+  height: 100%;
+  border-radius: inherit;
+  background:
+    linear-gradient(90deg,
+      var(--wow-ember),
+      var(--wow-accent) 40%,
+      var(--wow-accent-bright));
+  box-shadow: 0 0 8px var(--wow-gold-glow);
+  transition: width 400ms ease;
+}
+
+.empty-state {
+  border: 1px dashed var(--wow-line);
+  border-radius: 8px;
+  background: var(--wow-surface-deep);
+  padding: 1rem;
+}
+
+/* =====================================================================
+   DATA TABLES
+   ===================================================================== */
+
+.raid-bom-table tbody tr:nth-child(odd) {
+  background: color-mix(in oklab, var(--wow-surface-deep) 60%, transparent 40%);
+}
+
+.raid-bom-table tbody tr:hover {
+  background: var(--wow-link-hover);
+}
+
+/* =====================================================================
+   STAT BOXES
+   ===================================================================== */
+
+.war-stat {
+  border: 1px solid var(--wow-line);
+  border-radius: 8px;
+  background: var(--wow-surface-deep);
+  padding: 0.7rem;
+  transition: border-color 140ms ease;
+}
+
+.war-stat:hover {
+  border-color: color-mix(in oklab, var(--wow-accent) 40%, var(--wow-line));
+}
+
+.war-stat-label {
+  margin: 0;
+  font-size: 0.66rem;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wow-ink-soft);
+}
+
+.war-stat-value {
+  margin: 0.2rem 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: "Cinzel", serif;
+  color: var(--wow-ink);
+}
+
+/* =====================================================================
+   FORM ELEMENTS
+   ===================================================================== */
+
+.wow-input {
+  border: 1px solid var(--wow-line);
+  color: var(--wow-ink);
+  background: var(--wow-surface);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  font-family: var(--font-sans);
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.wow-input::placeholder {
+  color: color-mix(in oklab, var(--wow-ink-soft) 70%, transparent 30%);
+}
+
+.wow-input:focus {
+  outline: none;
+  border-color: var(--wow-accent);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.15),
+    0 0 0 2px color-mix(in oklab, var(--wow-accent) 20%, transparent 80%);
+}
+
+.wow-input:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Buttons */
+.wow-button,
+.wow-link-button,
+.wow-button-ready {
+  text-decoration: none;
+  cursor: pointer;
+  font-family: "Alegreya Sans SC", sans-serif;
+  letter-spacing: 0.06em;
+  transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.wow-button {
+  border: 1px solid color-mix(in oklab, var(--wow-accent) 50%, var(--wow-line));
+  color: var(--wow-ink);
+  background: linear-gradient(180deg, rgba(212, 162, 78, 0.18), rgba(160, 110, 46, 0.12));
+  box-shadow: inset 0 1px 0 var(--wow-inset);
+}
+
+.wow-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--wow-accent);
+  box-shadow:
+    inset 0 1px 0 var(--wow-inset),
+    0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wow-link-button {
+  border: 1px solid var(--wow-accent);
+  color: var(--wow-ink);
+  background: linear-gradient(180deg, rgba(212, 162, 78, 0.28), rgba(180, 130, 56, 0.16));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 230, 180, 0.2),
+    0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.wow-link-button:hover {
+  transform: translateY(-1px);
+  border-color: var(--wow-accent-bright);
+  background: linear-gradient(180deg, rgba(212, 162, 78, 0.36), rgba(180, 130, 56, 0.2));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 230, 180, 0.25),
+    0 8px 24px rgba(0, 0, 0, 0.25);
+}
+
+.wow-button-ready {
+  border: 1px solid color-mix(in oklab, var(--wow-emerald) 60%, var(--wow-line));
+  color: var(--wow-button-ready-ink);
+  background: var(--wow-button-ready);
+  box-shadow: inset 0 1px 0 rgba(200, 235, 212, 0.12);
+}
+
+.wow-button-ready:hover {
+  transform: translateY(-1px);
+  border-color: var(--wow-emerald);
+  box-shadow:
+    inset 0 1px 0 rgba(200, 235, 212, 0.15),
+    0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.wow-button:disabled,
+.wow-button-ready:disabled,
+.wow-link-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Feature cards hover */
+.feature-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--wow-accent) 46%, var(--wow-line));
+  box-shadow:
+    inset 0 1px 0 var(--wow-inset),
+    var(--panel-shadow-hover);
+}
+
+/* =====================================================================
+   TRANSITIONS & ANIMATIONS
+   ===================================================================== */
+
+button,
+.wow-panel,
+a {
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid var(--wow-accent);
+  outline-offset: 2px;
+}
+
+.route-enter {
+  animation: route-enter 680ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rise-in {
+  animation: rise-in 560ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes route-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px) scale(0.995);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.15;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes rune-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================================
+   RESPONSIVE BREAKPOINTS
+   ===================================================================== */
+
+@media (max-width: 1050px) {
+  .operation-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-track {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .war-nav {
+    gap: 0.5rem;
+  }
+
+  .war-auth-slot {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .war-nav-links {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 760px) {
+  .command-track {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-lane::after {
+    display: none;
+  }
+
+  .flow-track {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-copy span {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-wrap {
+    width: min(1140px, calc(100% - 1rem));
+  }
+
+  .nav-link {
+    font-size: 0.76rem;
+  }
+
+  .brand-seal {
+    width: 100%;
+    border-radius: 6px;
+    gap: 0.5rem;
+    padding: 0.45rem 0.6rem;
+  }
+
+  .brand-copy .display-title {
+    font-size: 1.05rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.52rem;
+  }
+
+  .war-nav-links {
+    border-radius: 6px;
+    justify-content: stretch;
+  }
+
+  .nav-link {
+    flex: 1;
+    justify-content: center;
+    padding: 0.38rem 0.5rem;
+  }
+
+  .nav-link::before {
+    display: none;
+  }
+
+  .operation-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================================
+   ACCESSIBILITY
+   ===================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
