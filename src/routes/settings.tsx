@@ -129,7 +129,7 @@ function SettingsContent() {
                 redirectTo:
                   typeof window === 'undefined'
                     ? '/settings'
-                    : `${window.location.origin}${window.location.pathname}${window.location.search}`,
+                    : `${window.location.pathname}${window.location.search}`,
               }).catch((err: unknown) => {
                 // OAuth redirects navigate away, dropping the WebSocket — expected.
                 if (

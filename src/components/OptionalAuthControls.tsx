@@ -46,15 +46,12 @@ function AuthControls() {
         redirectTo:
           typeof window === 'undefined'
             ? '/'
-            : `${window.location.origin}${window.location.pathname}${window.location.search}`,
+            : `${window.location.pathname}${window.location.search}`,
       })
     } catch (err) {
       // OAuth redirects navigate away, causing the WebSocket to drop.
       // This "connection lost" error is expected and can be ignored.
-      if (
-        err instanceof Error &&
-        err.message.includes('Connection lost')
-      ) {
+      if (err instanceof Error && err.message.includes('Connection lost')) {
         return
       }
       const message = err instanceof Error ? err.message : 'Unable to sign in.'
